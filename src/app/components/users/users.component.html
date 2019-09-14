@@ -1,0 +1,13 @@
+<section class="hero is-primary is-fullheight is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">User Data</h1>
+      <h2 class="subtitle is-bold">Retrieved via a service call to api-url and output via component.</h2>
+      <ul>
+        <li *ngFor="let item of userdata; let i = index">
+           {{item.name}}
+        </li>
+     </ul>
+    </div>
+  </div>
+</section>

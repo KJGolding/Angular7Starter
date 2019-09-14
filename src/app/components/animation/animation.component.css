@@ -1,0 +1,11 @@
+/* Custom div style for animation */
+.ex-div {
+    margin: 0 auto;
+    text-align: center;
+    width:200px;
+ }
+ .rotate {
+    width:100px;
+    height:67px;
+    border:solid 1px red;
+ }

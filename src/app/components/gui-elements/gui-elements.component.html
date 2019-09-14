@@ -1,0 +1,59 @@
+<section class="hero is-primary is-fullheight is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">{{title}}</h1>
+
+      <!-- following is a dropdown menu example-->
+      <h2>Month Drop Down Menu:</h2> 
+      <select (change) = "changemonths($event)"> 
+        <option *ngFor = "let i of months">{{i}}</option> 
+      </select>
+
+      <!-- following is a datepicker example using Materials -->
+      <!-- styling is in styles.css file which allows for global use -->
+      <br/><br/><br/><br/>
+      <mat-form-field>
+        <input matInput [matDatepicker] = "picker" placeholder = "Choose a date">
+        <mat-datepicker-toggle matSuffix [for] = "picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <!-- Following is use of virtual scrolling via photoservice -->
+      <br/><br/><br/><br/>
+      <h2>Angular 7 - Virtual Scrolling</h2>
+      <cdk-virtual-scroll-viewport [itemSize] = "20">
+        <table>
+          <thead>
+          <tr>
+            <td>ID</td>
+            <td>ThumbNail</td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *cdkVirtualFor = "let album of albumdetails">
+            <td>{{album.id}}</td>
+            <td>
+              <img src = "{{album.thumbnailUrl}}" width = "100" height = "100"/>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </cdk-virtual-scroll-viewport>
+
+      <!-- Following is use of drag & drop via userservice -->
+      <br/><br/><br/><br/>
+      <h2>Angular 7 - Drag & Drop Module</h2>
+      <div cdkDropList
+          #personList = "cdkDropList"
+            [cdkDropListData]="userdetails"
+            [cdkDropListConnectedTo]="[userlist]"
+            class = "example-list"
+            (cdkDropListDropped)="onDrop($event)">
+        <div *ngFor = "let item of userdetails; let i = index" class="divlayout" cdkDrag>
+          {{item.name}}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

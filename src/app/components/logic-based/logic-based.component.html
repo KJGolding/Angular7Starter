@@ -1,0 +1,24 @@
+<section class="hero is-primary is-fullheight is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">{{title}}</h1>
+        <h1 class="title">The following duplicate title is changed via a directive.</h1>
+        <h1 class="title" changeText>  {{title}}</h1>  <!-- uses the changetext directive-->
+        <h2>Toggle Value via if/else logic using ng-template</h2>
+          <span *ngIf = "isavailable; else condition4">Condition is valid.</span>
+          <!--Use caution with condition variable names. Will overwrite with a duplicate name.-->
+          <ng-template #condition4>Condition is invalid.</ng-template>
+          <br/><br/>
+        <h2>Toggle Value via if/then/else logic using ng-template</h2>
+          <span *ngIf = "isavailable; then condition1 else condition2"></span>
+          <ng-template #condition1>Condition is valid.</ng-template>
+          <ng-template #condition2>Condition is invalid.</ng-template>
+          <br/><br/>
+        <button (click) = "myClickFunction($event)">
+          <!-- button styled via logic-based.component.css file-->
+          Click Me <!-- toggles above isavailable values -->
+        </button>
+
+      </div>
+    </div>
+  </section>

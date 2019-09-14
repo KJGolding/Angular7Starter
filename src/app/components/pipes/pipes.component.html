@@ -1,0 +1,52 @@
+<section class="hero is-primary is-fullheight is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <!-- title -->
+        <h1 class="title">{{title}}</h1> 
+        <!-- Uppercase Pipe -->
+        <b style="padding-right: 20px;">Uppercase Pipe:</b>
+        <b>{{title | uppercase}}</b>
+        <br/> 
+        <!-- Lowercase Pipe -->
+        <b style="padding-right: 20px;">Lowercase Pipe:</b>
+        <b>{{title | lowercase}}</b>
+        <br/> 
+        <!-- USD Currency Pipe -->
+        <b style="padding-right: 20px;">USD Currency Pipe:</b>
+        <b>{{6589.23 | currency:"USD"}}</b>
+        <br/>
+        <!-- EUR Currency Pipe -->
+        <b style="padding-right: 20px;">EUR Currency Pipe:</b>
+        <b>{{6589.23 | currency:"EUR"}}</b>
+        <br/>
+        <!-- Date Pipe, d/M/y format -->
+        <b style="padding-right: 20px;">Date Pipe - d/M/y Format:</b>
+        <b>{{todaydate | date:'d/M/y'}}</b>
+        <br/>
+        <!-- Date Pipe -->
+        <b style="padding-right: 20px;">Date Pipe - shortTime Format:</b>
+        <b>{{todaydate | date:'shortTime'}}</b>
+        <br/>
+        <!-- Decimal Pipe -->
+        <b style="padding-right: 20px;">Decimal Pipe - 4 Decimal Places:</b>
+        <b>{{454.78787814 | number: '3.4'}}</b>
+        <br/>
+        <!-- JSON Pipe -->
+        <b style="padding-right: 20px;">JSON Pipe:</b>
+        <b>{{ jsonval | json }}</b>
+        <br/>
+        <!-- Percent Pipe -->
+        <b style="padding-right: 20px;">Percent Pipe:</b>
+        <b>{{ 00.54565 | percent }}</b>
+        <br/>
+        <!-- Slice Pipe -->
+        <b style="padding-right: 20px;">Slice Pipe:</b>
+        <b>{{ months | slice:2:6 }}</b>
+        <br/>
+        <!-- Custom Pipe -->
+        <b style="padding-right: 20px;">Custom Pipe:</b>
+        <b>Square root of 729 is: {{729 | sqrt}}</b>
+        <br/>
+      </div>
+    </div>
+  </section>
